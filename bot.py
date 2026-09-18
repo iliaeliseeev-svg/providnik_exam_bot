@@ -62,7 +62,7 @@ def send_question(chat_id):
         buttons = [
             types.InlineKeyboardButton(str(i), callback_data=f"s|{i}")
             for i in range(1, len(q["a"]) + 1)
-        ]
+        ],
         markup.row(*buttons)
         header = f"❓ Вопрос {u['idx']+1}/{len(u['exam'])}\n\n{q['q']}\n\n{options_text}"
     else:
